@@ -9,7 +9,7 @@ const cgminer = new Client({
  */
 cgminer.connect()
     .then(function () {
-        return cgminer.request({ name: 'version' });
+        return cgminer.request({ name: 'stats' });
     })
     .then(function (version) {
         // console.log(version);
