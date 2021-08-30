@@ -1,6 +1,6 @@
 const Client = require('cgminer-api').client;
 const cgminer = new Client({
-    host: '192.168.10.51',
+    host: '192.168.10.132',
     port: 4028
 });
 /**
@@ -9,7 +9,7 @@ const cgminer = new Client({
  */
 cgminer.connect()
     .then(function () {
-        return cgminer.request({ name: 'stats' });
+        return cgminer.request({ name: 'devs' });
     })
     .then(function (version) {
         // console.log(version);
